@@ -16,7 +16,7 @@ def main():
     inertias = compute_elbow(features, k_values)
     plot_elbow(k_values, inertias, elbow_plot_path)
 
-    chosen_k = 5
+    chosen_k = 4
     labels, centers = run_kmeans(features, chosen_k)
     silhouette = compute_silhouette(features, labels)
     plot_clusters_2d(features, labels, cluster_plot_path)
@@ -26,3 +26,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
